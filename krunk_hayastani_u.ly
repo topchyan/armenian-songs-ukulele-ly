@@ -8,7 +8,7 @@
   arranger = "Version: Ruben Hakhverdyan"
   poet     = "Խօսք՝ Րաֆֆիի"
   tagline  = \markup {
-    Engraved at
+    License: CC-BY-SA 4.0. Engraved on 
     \simple #(strftime "%Y-%m-%d" (localtime (current-time)))
     with \with-url #"http://lilypond.org/"
     \line { LilyPond \simple #(lilypond-version) (http://lilypond.org/) }
