@@ -7,14 +7,19 @@
   composer = "Երաժշտ.՝ ըստ Կոմիտասի"
   arranger = "Version: Ruben Hakhverdyan"
   poet     = "Խօսք՝ Րաֆֆիի"
-  tagline  = "Lilypond by Avetik Topchyan, License: CC BY-SA 3.0"
+  tagline  = \markup {
+    Engraved at
+    \simple #(strftime "%Y-%m-%d" (localtime (current-time)))
+    with \with-url #"http://lilypond.org/"
+    \line { LilyPond \simple #(lilypond-version) (http://lilypond.org/) }
+  }
 }
 
 global = {
   \time 6/8
   \key c \major
   \tempo 4=80
-  \set Staff.stringTunings = #ukulele-tuning
+  \set stringTunings = #ukulele-tuning
 }
 
 chordNames = \chordmode {
@@ -75,6 +80,7 @@ music =
   }
   \addlyrics      { \words  }
   \new TabStaff   {
+    \tabFullNotation
     \set TabStaff.stringTunings = #ukulele-tuning
     \set TabStaff.instrumentName = "Ukulele"
     \set TabStaff.midiInstrument = "acoustic guitar (nylon)"
@@ -84,9 +90,10 @@ music =
 
 \score {
   <<
-    \new ChordNames  \chordNames
-    \new FretBoards  \chordNames
+    \new ChordNames { \chordNames  }
+    \new FretBoards { \chordNames  }
   >>
+  \layout { indent = 3\in }
 }
 
 \score {
@@ -97,7 +104,7 @@ music =
 \score {
   \unfoldRepeats
   \music
-  \midi{}
+  \midi {\tempo 4=80}
 }
 
 \markup {
