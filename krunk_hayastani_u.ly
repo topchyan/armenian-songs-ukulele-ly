@@ -45,10 +45,10 @@ melody = \relative c'' {
   \global
   r8 g g c4 b8 | d c b c a4  |
   a4 b8 c4 a8  | c b a g4.   |
-  f4 a8 a4 f8  | g f e f d4  |
-  g4 g8 g4 e8  | f e d c4.   |
+  f4 a8 a4 e8  | g f e f d4  |
+  g4 a8 g4 e8  | f e d c4.   |
   f4 a8 a4 b8  | d c a g4 e8 |
-  g4 g8 g4 e8  | f e d c4.   | \break
+  g4 g8 g4 d8  | f e d c4.   | \break
 
   \repeat volta 2 {
     c'4 e8 e4 e8 | e e f e8. d16 c8 |
